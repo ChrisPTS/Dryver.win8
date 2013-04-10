@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License. 
+-->
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3677C1B7-D68B-4CF9-BF8A-E869D437A6DF}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dryver</RootNamespace>
+    <AssemblyName>Dryver</AssemblyName>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>
+    </SilverlightVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>en-US</SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>CordovaAppProj_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Dryver.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <BackgroundAgentType />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cordovalib\BrowserMouseHelper.cs" />
+    <Compile Include="cordovalib\CommandFactory.cs" />
+    <Compile Include="cordovalib\Commands\Accelerometer.cs" />
+    <Compile Include="cordovalib\Commands\AudioFormatsHelper.cs" />
+    <Compile Include="cordovalib\Commands\AudioPlayer.cs" />
+    <Compile Include="cordovalib\Commands\BaseCommand.cs" />
+    <Compile Include="cordovalib\Commands\Battery.cs" />
+    <Compile Include="cordovalib\Commands\Camera.cs" />
+    <Compile Include="cordovalib\Commands\Capture.cs" />
+    <Compile Include="cordovalib\Commands\Compass.cs" />
+    <Compile Include="cordovalib\Commands\Contacts.cs" />
+    <Compile Include="cordovalib\Commands\DebugConsole.cs" />
+    <Compile Include="cordovalib\Commands\Device.cs" />
+    <Compile Include="cordovalib\Commands\File.cs" />
+    <Compile Include="cordovalib\Commands\FileTransfer.cs" />
+    <Compile Include="cordovalib\Commands\GeoLocation.cs" />
+    <Compile Include="cordovalib\Commands\ImageExifHelper.cs" />
+    <Compile Include="cordovalib\Commands\InAppBrowser.cs" />
+    <Compile Include="cordovalib\Commands\Media.cs" />
+    <Compile Include="cordovalib\Commands\MimeTypeMapper.cs" />
+    <Compile Include="cordovalib\Commands\NetworkStatus.cs" />
+    <Compile Include="cordovalib\Commands\Notification.cs" />
+    <Compile Include="cordovalib\ConfigHandler.cs" />
+    <Compile Include="cordovalib\CordovaCommandCall.cs" />
+    <Compile Include="cordovalib\CordovaView.xaml.cs">
+      <DependentUpon>CordovaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cordovalib\DOMStorageHelper.cs" />
+    <Compile Include="cordovalib\JSON\JsonHelper.cs" />
+    <Compile Include="cordovalib\NativeExecution.cs" />
+    <Compile Include="cordovalib\OrientationHelper.cs" />
+    <Compile Include="cordovalib\PluginResult.cs" />
+    <Compile Include="cordovalib\ScriptCallback.cs" />
+    <Compile Include="cordovalib\UI\AudioCaptureTask.cs" />
+    <Compile Include="cordovalib\UI\AudioRecorder.xaml.cs">
+      <DependentUpon>AudioRecorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cordovalib\UI\ImageCapture.xaml.cs">
+      <DependentUpon>ImageCapture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cordovalib\UI\NotificationBox.xaml.cs">
+      <DependentUpon>NotificationBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cordovalib\UI\VideoCaptureTask.cs" />
+    <Compile Include="cordovalib\UI\VideoRecorder.xaml.cs">
+      <DependentUpon>VideoRecorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="cordovalib\CordovaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="cordovalib\UI\AudioRecorder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="cordovalib\UI\ImageCapture.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="cordovalib\UI\NotificationBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="cordovalib\UI\VideoRecorder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.xml" />
+    <Content Include="icon_158.png" />
+    <Content Include="icon_336.png" />
+    <Content Include="icon_512.png" />
+    <Content Include="resources\notification-beep.wav" />
+    <Content Include="www\config.xml" />
+    <Content Include="www\icon.png" />
+    <Content Include="www\js\app\app.js" />
+    <Content Include="www\js\app\appNetworkLoop.js" />
+    <Content Include="www\js\app\bootstrap.js" />
+    <Content Include="www\js\app\chat.js" />
+    <Content Include="www\js\app\chat.v2.js" />
+    <Content Include="www\js\app\chat_templator.js" />
+    <Content Include="www\js\app\contactinvite.js" />
+    <Content Include="www\js\app\dryver-android.js" />
+    <Content Include="www\js\app\dryver-blackberry.js" />
+    <Content Include="www\js\app\dryver-iphone.js" />
+    <Content Include="www\js\app\dryver-wp.js" />
+    <Content Include="www\js\app\dryver.conf.js" />
+    <Content Include="www\js\app\dryver.js" />
+    <Content Include="www\js\app\friendFeed.js" />
+    <Content Include="www\js\app\login.js" />
+    <Content Include="www\js\app\mainmenu.js" />
+    <Content Include="www\js\app\networkStatus.js" />
+    <Content Include="www\js\app\profile.js" />
+    <Content Include="www\js\app\pts.bblib.js" />
+    <Content Include="www\js\app\registration.js" />
+    <Content Include="www\js\app\rescue-me.js" />
+    <Content Include="www\js\app\setstatus.js" />
+    <Content Include="www\js\app\taxiFeed.js" />
+    <Content Include="www\js\lib\bbpushwoosh.js" />
+    <Content Include="www\js\lib\cordova-2.2.0.blackberry.js" />
+    <Content Include="www\js\lib\cordova-2.2.0.js" />
+    <Content Include="www\js\lib\cordova-2.2.0.wp.js" />
+    <Content Include="www\js\lib\cordova-2.3.0.js" />
+    <Content Include="www\js\lib\cordova-2.4.0.js" />
+    <Content Include="www\js\lib\cordova-2.5.0.android.js" />
+    <Content Include="www\js\lib\cordova-2.5.0.blackberry.js" />
+    <Content Include="www\js\lib\cordova-2.5.0.win8.js" />
+    <Content Include="www\js\lib\iscroll-lite.js" />
+    <Content Include="www\js\lib\jquery.min.js" />
+    <Content Include="www\js\lib\jquery.mobile-1.2.0.min.js" />
+    <Content Include="www\js\lib\knockout-2.1.0.js" />
+    <Content Include="www\js\lib\knockout.mapping-latest.debug.js" />
+    <Content Include="www\js\lib\knockout.validation.min.js" />
+    <Content Include="www\js\lib\Math.uuid.js" />
+    <Content Include="www\js\lib\PushNotificationAndroid.js" />
+    <Content Include="www\js\lib\PushNotificationiOS.js" />
+    <Content Include="www\js\lib\PushWooshPluginWP.js" />
+    <None Include="VERSION" />
+    <None Include="www\desktop.ini" />
+    <None Include="www\index.php" />
+    <None Include="www\js\app\contactinvite.js.bastardthing" />
+    <None Include="www\js\app\contactinvite.js.oldway" />
+    <Resource Include="cordovalib\Images\appbar.back.rest.png" />
+    <Resource Include="cordovalib\Images\appbar.close.rest.png" />
+    <Resource Include="cordovalib\Images\appbar.feature.video.rest.png" />
+    <Resource Include="cordovalib\Images\appbar.next.rest.png" />
+    <Resource Include="cordovalib\Images\appbar.save.rest.png" />
+    <Resource Include="cordovalib\Images\appbar.stop.rest.png" />
+    <Content Include="cordovalib\resources\notification-beep.wav" />
+    <Resource Include="www\images\ajaxloader.gif" />
+    <Resource Include="www\css\images\ajax-loader.gif" />
+    <Resource Include="www\css\images\ajaxloader.gif" />
+    <Content Include="www\css\codiqa.css" />
+    <Content Include="www\css\dryver-base.css" />
+    <Content Include="www\css\dryver-main-menu.css" />
+    <Content Include="www\css\dryver-status.css" />
+    <Content Include="www\css\images\ajaxloader.png" />
+    <Content Include="www\css\images\broughttoyouby.png" />
+    <Content Include="www\css\images\cabicon.png" />
+    <Content Include="www\css\images\dryverlogo.png" />
+    <Content Include="www\css\images\friendsicon.png" />
+    <Content Include="www\css\images\genericbackground.png" />
+    <Content Include="www\css\images\genericbutton.png" />
+    <Content Include="www\css\images\headerstrap.png" />
+    <Content Include="www\css\images\homeicon.png" />
+    <Content Include="www\css\images\icons-18-white.png" />
+    <Content Include="www\css\images\icons18black.png" />
+    <Content Include="www\css\images\icons18white.png" />
+    <Content Include="www\css\images\icons36black.png" />
+    <Content Include="www\css\images\icons36white.png" />
+    <Content Include="www\css\images\imdrinking.png" />
+    <Content Include="www\css\images\imdryving.png" />
+    <Content Include="www\css\images\invitefriendsbutton.png" />
+    <Content Include="www\css\images\iospackcolor.png" />
+    <Content Include="www\css\images\iospackcolor2x.png" />
+    <Content Include="www\css\images\messagesicon.png" />
+    <Content Include="www\css\images\rescuemebutton.png" />
+    <Content Include="www\css\images\startdryving.png" />
+    <Content Include="www\css\images\toolbarbackground.png" />
+    <Content Include="www\css\images\topslogo.png" />
+    <Content Include="www\css\images\userprofilepic.jpg" />
+    <Content Include="www\css\jqm-dryver.css" />
+    <Content Include="www\css\jquery.mobile-1.2.0.min.css" />
+    <Content Include="www\css\platform-android.css" />
+    <Content Include="www\css\platform-blackberry-hi.css" />
+    <Content Include="www\css\platform-blackberry-med.css" />
+    <Content Include="www\css\platform-blackberry.css" />
+    <Content Include="www\css\platform-iphone.css" />
+    <Content Include="www\css\platform-wp.css" />
+    <Content Include="www\images\ajaxloader.png" />
+    <Content Include="www\images\back-button.png" />
+    <Content Include="www\images\block-button.png" />
+    <Content Include="www\images\broughttoyouby.png" />
+    <Content Include="www\images\cab-icon.png" />
+    <Content Include="www\images\call-button.png" />
+    <Content Include="www\images\chat-button.png" />
+    <Resource Include="www\images\contacts-loading.gif" />
+    <Content Include="www\images\default-profile-pic.png" />
+    <Content Include="www\images\default-taxi-pic.png" />
+    <Content Include="www\images\dryver-dropdown.png" />
+    <Content Include="www\images\dryverlogo.png" />
+    <Content Include="www\images\friend-icon-accept.png" />
+    <Content Include="www\images\friend-icon-add.png" />
+    <Content Include="www\images\friend-icon-cancel.png" />
+    <Content Include="www\images\friends-icon.png" />
+    <Content Include="www\images\genericbackground.png" />
+    <Content Include="www\images\genericbutton.png" />
+    <Content Include="www\images\headerstrap.png" />
+    <Content Include="www\images\homeicon.png" />
+    <Content Include="www\images\icons18black.png" />
+    <Content Include="www\images\icons18white.png" />
+    <Content Include="www\images\icons36black.png" />
+    <Content Include="www\images\icons36white.png" />
+    <Content Include="www\images\imdrinking.png" />
+    <Content Include="www\images\imdrinking_unselected.png" />
+    <Content Include="www\images\imdryving.png" />
+    <Content Include="www\images\imdryving_unselected.png" />
+    <Content Include="www\images\imsafe-button.png" />
+    <Content Include="www\images\invitefriendsbutton.png" />
+    <Content Include="www\images\iospackcolor.png" />
+    <Content Include="www\images\iospackcolor2x.png" />
+    <Resource Include="www\images\loader_small.gif" />
+    <Content Include="www\images\location-icon.png" />
+    <Content Include="www\images\login-button.png" />
+    <Content Include="www\images\logout-icon.png" />
+    <Content Include="www\images\main-menu-overlay.png" />
+    <Content Include="www\images\messages-icon.png" />
+    <Content Include="www\images\new-message-icon.png" />
+    <Content Include="www\images\news-icon.png" />
+    <Content Include="www\images\profile-icon.png" />
+    <Content Include="www\images\register-button.png" />
+    <Content Include="www\images\rescue-me.png" />
+    <Content Include="www\images\rescuemebutton.png" />
+    <Content Include="www\images\small-drinking-icon.png" />
+    <Content Include="www\images\small-dryving-icon.png" />
+    <Content Include="www\images\small-neutral-icon.png" />
+    <Content Include="www\images\small-sos-icon.png" />
+    <Content Include="www\images\smallplus.jpg" />
+    <Resource Include="www\images\smalltick.gif" />
+    <Content Include="www\images\startdryving.png" />
+    <Content Include="www\images\status-button.png" />
+    <Content Include="www\images\status-icon.png" />
+    <Content Include="www\images\tag-button.png" />
+    <Content Include="www\images\taxi-call-icon.png" />
+    <Content Include="www\images\taxi-message-icon.png" />
+    <Content Include="www\images\toolbarbackground.png" />
+    <Content Include="www\images\toolbarbackground_sml.png" />
+    <Content Include="www\images\topslogo.png" />
+    <Content Include="www\images\untag-button.png" />
+    <Content Include="www\images\userprofilepic.jpg" />
+    <Content Include="www\index.html">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="cordova\debug.bat" />
+    <None Include="cordova\emulate.bat" />
+    <None Include="Properties\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Plugins\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PushSDK\PushSDK.csproj">
+      <Project>{038DA9F9-D982-4ADF-852C-D68C8894705E}</Project>
+      <Name>PushSDK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <PropertyGroup>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
